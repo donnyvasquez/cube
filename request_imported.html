@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Pólizas de Grupo</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container my-4 d-none">
+    <h4>REG-101 - Nueva importación SoftwareOne SAS</h4>
+    <div class="p-3 d-flex">
+      <div class="data-wrapper w-100">
+        <div class="d-flex flex-column flex-md-row w-100 justify-content-between align-items-start align-items-md-center">
+          <!-- ID Registro -->
+          <div class="flex-fill">
+            <small class="text-muted d-block">ID Registro</small>
+            <span class="fw-semibold">REG-101</span>
+          </div>
+          <!-- Fecha de Creación -->
+          <div class="flex-fill">
+            <small class="text-muted d-block">Fecha de Creación</small>
+            <span class="fw-semibold">2025-03-15</span>
+          </div>
+          <!-- Usuario Creador -->
+          <div class="flex-fill">
+            <small class="text-muted d-block">Usuario Creador</small>
+            <span class="fw-semibold">agente2</span>
+          </div>
+          <!-- Última Modificación -->
+          <div class="flex-fill">
+            <small class="text-muted d-block">Última Modificación</small>
+            <span class="fw-semibold">2025-03-15</span>
+          </div>
+          <!-- Estado -->
+          <div class="flex-fill">
+            <small class="text-muted d-block">Estado</small>
+            <span class="badge bg-danger">Con Errores</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-bottom p-3 d-flex">
+      <div class="data-wrapper w-100">
+        <div class="d-flex flex-column flex-md-row w-100 justify-content-between align-items-start align-items-md-center">
+          <!-- ID Registro -->
+          <div class="flex-fill">
+            <small class="text-muted d-block">Pólizas</small>
+            <span class="fw-semibold">3</span>
+          </div>
+          <!-- Fecha de Creación -->
+          <div class="flex-fill">
+            <small class="text-muted d-block">Asegurados</small>
+            <span class="fw-semibold">183</span>
+          </div>
+          <!-- Usuario Creador -->
+          <div class="flex-fill">
+            <small class="text-muted d-block">Alertas</small>
+            <span class="fw-semibold">2</span>
+          </div>
+          <!-- Última Modificación -->
+          <div class="flex-fill">
+            <small class="text-muted d-block">Características</small>
+            <span class="fw-semibold">Grupo en emisión</span>
+          </div>
+          <!-- Última Modificación -->
+          <div class="flex-fill">
+            </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Zona de errores -->
+    <div class="mt-3 d-flex flex-column gap-3">
+      <h6>Errores encontrados</h6>
+      <!-- Lista de errores agrupados por asegurado -->
+      <div class="list-group">
+        <div class="align-items-center d-flex justify-content-between list-group-item list-group-item-light">
+          <span><strong>4657890345</strong>: Falta TI_4657890345, Falta primer apellido</span>
+          <button class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalEditarAsegurado">Editar</button>
+        </div>
+        
+        <div class="align-items-center d-flex justify-content-between list-group-item list-group-item-light">
+          <span><strong>9876543210</strong>: Falta TD_9876543210</span>
+          <button class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalEditarAsegurado">Editar</button>
+        </div>
+      </div>
+    </div>
+  </div>  
+  
+  <div class="container my-4">
+    <div class="d-flex">
+      <button type="button" class="btn btn-light border-0 rounded-circle back-button" onclick="history.back()">
+        <i class="bi bi-arrow-left-short"></i>
+      </button> 
+      <h1 class="mb-0">REG-101 - Nueva importación SoftwareOne SAS</h1>
+    </div>
+      
+    <!-- Información General de la Póliza -->
+    <div class="request-general-info mb-4">
+      <div class="p-3 d-flex">
+        <div class="data-wrapper w-100">
+          <div class="d-flex flex-column flex-md-row w-100 justify-content-between align-items-start align-items-md-center row row-cols-5">
+            <!-- ID Registro -->
+            <div class="flex-fill">
+              <small class="text-muted d-block">ID Registro</small>
+              <span class="fw-semibold">REG-101</span>
+            </div>
+            <!-- Fecha de Creación -->
+            <div class="flex-fill">
+              <small class="text-muted d-block">Fecha de Creación</small>
+              <span class="fw-semibold">2025-03-15</span>
+            </div>
+            <!-- Usuario Creador -->
+            <div class="flex-fill">
+              <small class="text-muted d-block">Usuario Creador</small>
+              <span class="fw-semibold">agente2</span>
+            </div>
+            <!-- Última Modificación -->
+            <div class="flex-fill">
+              <small class="text-muted d-block">Última Modificación</small>
+              <span class="fw-semibold">2025-03-15</span>
+            </div>
+            <!-- Estado -->
+            <div class="flex-fill">
+              <small class="text-muted d-block">Estado</small>
+              <span class="badge bg-success">Apr. por sistema</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-bottom p-3 d-flex">
+        <div class="data-wrapper w-100">
+          <div class="d-flex flex-column flex-md-row w-100 justify-content-between align-items-start align-items-md-center row row-cols-5">
+            <!-- ID Registro -->
+            <div class="flex-fill">
+              <small class="text-muted d-block">Pólizas</small>
+              <span class="fw-semibold">27</span>
+            </div>
+            <!-- Fecha de Creación -->
+            <div class="flex-fill">
+              <small class="text-muted d-block">Asegurados</small>
+              <span class="fw-semibold">183</span>
+            </div>
+            <!-- Usuario Creador -->
+            <div class="flex-fill">
+              <small class="text-muted d-block">Alertas</small>
+              <span class="fw-semibold">0</span>
+            </div>
+            <!-- Última Modificación -->
+            <div class="flex-fill">
+              <small class="text-muted d-block">Características</small>
+              <span class="fw-semibold">Grupo en emisión</span>
+            </div>
+            <!-- Última Modificación -->
+            <div class="flex-fill">
+              <small class="text-muted d-block">CRM inquiry</small>
+              <span class="fw-semibold"><a class="link-underline link-underline-opacity-0" href="crm.html" target="_blank">48519 <i class="bi bi-box-arrow-up-right"></i></a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+      <!-- Asegurados y Documentación -->
+      <div class="card mb-4">
+        <div class="card-header">
+          Asegurados y Documentación
+        </div>
+        <div class="card-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Nombre Asegurado</th>
+                <th>Documento de Identidad</th>
+                <th>Carnet de Discapacidad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Juan Pérez</td>
+                <td>
+                  <a href="#" target="_blank">Ver Documento</a>
+                </td>
+                <td>
+                  <a href="#" target="_blank">Ver Carnet</a>
+                </td>
+              </tr>
+              <tr>
+                <td>María López</td>
+                <td>
+                  <a href="#" target="_blank">Ver Documento</a>
+                </td>
+                <td>No Aplica</td>
+              </tr>
+              <!-- Puedes agregar más filas según sea necesario -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <!-- Información del Inquiry en el CRM -->
+      <div class="card mb-4">
+        <div class="card-header">
+          Información del Inquiry en CRM
+        </div>
+        <div class="card-body">
+          <p><strong>ID Inquiry:</strong> INQ001</p>
+          <p><strong>Estado Inquiry:</strong> <span class="badge bg-warning text-dark">Pendiente</span></p>
+          <p><strong>Historial de Estados:</strong></p>
+          <ul>
+            <li>2025-03-10 10:30 - Inquiry Creado</li>
+            <li>2025-03-10 11:00 - En revisión</li>
+            <li>2025-03-10 11:30 - Approved by system</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Acciones -->
+      <div class="d-flex justify-content-end">
+        <a href="#" class="btn btn-secondary me-2">Volver</a>
+        <a href="#" class="btn btn-primary">Editar Póliza</a>
+      </div>
+      
+    </div>
+    
+  <!-- Detalle de Solicitud - Procesando la importación -->
+  <div class="container my-4 d-none">
+    <div class="border-bottom item-register p-3 d-flex">
+      <div class="data-wrapper w-100">
+        <h4>REG-101 - Nueva importación SoftwareOne SAS</h4>
+        <div class="d-flex flex-column flex-md-row w-100 justify-content-between align-items-start align-items-md-center">
+          <!-- ID Registro -->
+          <div class="flex-fill">
+            <small class="text-muted d-block">ID Registro</small>
+            <span class="fw-semibold">REG-100</span>
+          </div>
+          <!-- Fecha de Creación -->
+          <div class="flex-fill">
+            <small class="text-muted d-block">Fecha de Creación</small>
+            <span class="fw-semibold">2025-03-15</span>
+          </div>
+          <!-- Usuario Creador -->
+          <div class="flex-fill">
+            <small class="text-muted d-block">Usuario Creador</small>
+            <span class="fw-semibold">agente1</span>
+          </div>
+          <!-- Última Modificación -->
+          <div class="flex-fill">
+            <small class="text-muted d-block">Última Modificación</small>
+            <span class="fw-semibold">2025-03-15</span>
+          </div>
+          <!-- Estado -->
+          <div class="flex-fill">
+            <small class="text-muted d-block">Estado</small>
+            <span class="badge bg-info">Procesando</span>
+          </div>
+        </div>
+        <!-- Switch de emisión (deshabilitado mientras se procesa) -->
+        <div class="mt-2">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="switchEmisionProc" disabled>
+            <label class="form-check-label" for="switchEmisionProc">Es emisión</label>
+          </div>
+        </div>
+        <!-- Spinner de procesamiento -->
+        <div class="mt-3 d-flex align-items-center">
+          <div class="spinner-grow text-primary me-2" role="status">
+            <span class="visually-hidden">Procesando...</span>
+          </div>
+          <span>La información se está procesando, por favor espere...</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+  
+  
+  
+  
+  <!-- Modal Extra Large y Scrollable para Alta nuevo asegurado -->
+  <div class="modal fade" id="modalNuevoAsegurado" tabindex="-1" aria-labelledby="modalNuevoAseguradoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalNuevoAseguradoLabel">Agregar asegurado</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formNuevoAsegurado">
+            <div class="row g-3">
+              <!-- Seleccionar póliza -->
+              <div class="col-12 col-md-4">
+                <div class="form-floating">
+                  <select class="form-select" id="selPoliza" required>
+                    <option value="" disabled selected>Seleccione una póliza</option>
+                    <option value="POL12345">POL12345</option>
+                    <option value="POL12346">POL12346</option>
+                    <option value="POL99999">POL99999</option>
+                  </select>
+                  <label for="selPoliza">Seleccionar póliza</label>
+                </div>
+              </div>
+              <!-- Grupo -->
+              <div class="col-12 col-md-4">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="grupo" placeholder="Grupo" required>
+                  <label for="grupo">Grupo</label>
+                </div>
+              </div>
+              <!-- Fecha de inicio de cobertura -->
+              <div class="col-12 col-md-4">
+                <div class="form-floating">
+                  <input type="date" class="form-control" id="fechaCobertura" required>
+                  <label for="fechaCobertura">Fecha de inicio de cobertura</label>
+                </div>
+              </div>
+              <!-- N° de identificación -->
+              <div class="col-12 col-md-4">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="identificacion" placeholder="N° de identificación" required>
+                  <label for="identificacion">N° de identificación</label>
+                </div>
+              </div>
+              <!-- Primer nombre -->
+              <div class="col-12 col-md-4">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="primerNombre" placeholder="Ej: María" required>
+                  <label for="primerNombre">Primer nombre</label>
+                </div>
+              </div>
+              <!-- Segundo nombre -->
+              <div class="col-12 col-md-4">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="segundoNombre" placeholder="Ej: Tereza">
+                  <label for="segundoNombre">Segundo nombre</label>
+                </div>
+              </div>
+              <!-- Primer Apellido -->
+              <div class="col-12 col-md-4">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="primerApellido" placeholder="Ej: González" required>
+                  <label for="primerApellido">Primer Apellido</label>
+                </div>
+              </div>
+              <!-- Segundo Apellido -->
+              <div class="col-12 col-md-4">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="segundoApellido" placeholder="Ej: Fernández">
+                  <label for="segundoApellido">Segundo Apellido</label>
+                </div>
+              </div>
+              <!-- Fecha de nacimiento -->
+              <div class="col-12 col-md-4">
+                <div class="form-floating">
+                  <input type="date" class="form-control" id="fechaNacimiento">
+                  <label for="fechaNacimiento">Fecha de nacimiento</label>
+                </div>
+              </div>
+              <!-- Género -->
+              <div class="col-12 col-md-4">
+                <div class="form-floating">
+                  <select class="form-select" id="genero">
+                    <option value="" disabled selected>Seleccione</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                    <option value="X">Otro</option>
+                  </select>
+                  <label for="genero">Género</label>
+                </div>
+              </div>
+              <!-- Estado civil -->
+              <div class="col-12 col-md-4">
+                <div class="form-floating">
+                  <select class="form-select" id="estadoCivil">
+                    <option value="" disabled selected>Seleccione</option>
+                    <option value="S">Soltero(a)</option>
+                    <option value="C">Casado(a)</option>
+                    <option value="U">Unión libre</option>
+                    <option value="V">Viudo(a)</option>
+                  </select>
+                  <label for="estadoCivil">Estado civil</label>
+                </div>
+              </div>
+              <!-- Adjuntar documento -->
+              <div class="col-12">
+                <label class="form-label">Adjunta tu documento de identificación (PDF, JPG, JPEG, BMP) máx 25MB</label>
+                <input type="file" class="form-control" id="documentoID" accept=".pdf,.jpg,.jpeg,.bmp,.png" multiple>
+                <!-- Aquí podrías mostrar la lista de archivos subidos si deseas replicar la vista previa -->
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+      Cerrar
+    </button>
+    <button type="button" class="btn btn-primary" id="btnAgregarAsegurado">
+      Agregar
+    </button>
+  </div>
+  
+      </div>
+    </div>
+  </div> 
+  
+  <!-- Modal Importación de Asegurados -->
+  <div class="modal fade" id="modalImportarPolizas" tabindex="-1" aria-labelledby="modalImportarPolizasLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalImportarPolizasLabel">Importación de asegurados</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Pestañas tipo underline -->
+          <ul class="nav nav-underline mb-3" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="tabAltaPolizas-tab" data-bs-toggle="tab" data-bs-target="#tabAltaPolizas" type="button" role="tab" aria-controls="tabAltaPolizas" aria-selected="true">
+                Alta nuevas pólizas
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="tabAltaBajaAsegurados-tab" data-bs-toggle="tab" data-bs-target="#tabAltaBajaAsegurados" type="button" role="tab" aria-controls="tabAltaBajaAsegurados" aria-selected="false">
+                Alta o baja de asegurados
+              </button>
+            </li>
+          </ul>
+  
+          <!-- Contenido de las pestañas -->
+          <div class="tab-content">
+            <!-- Primer tab: Alta nuevas pólizas -->
+            <div class="tab-pane fade show active" id="tabAltaPolizas" role="tabpanel" aria-labelledby="tabAltaPolizas-tab">
+              <div class="row g-3">
+                <!-- Switch: Pólizas para nueva emisión -->
+                <div class="col-12">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="switchNuevaEmision">
+                    <label class="form-check-label" for="switchNuevaEmision">Pólizas para nueva emisión</label>
+                  </div>
+                </div>
+                <!-- Número de grupo -->
+                <div class="col-12 col-md-4">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="numeroGrupoImportacion" placeholder="Número de grupo" required>
+                    <label for="numeroGrupoImportacion">Número de grupo</label>
+                  </div>
+                </div>
+                <!-- Adjuntar excel (CSV) del template diligenciado -->
+                <div class="col-12 col-md-4">
+                  <div class="form-floating">
+                    <input type="file" class="form-control" id="excelTemplate" accept=".csv" required>
+                    <label for="excelTemplate">Adjuntar excel (CSV) del template diligenciado</label>
+                  </div>
+                </div>
+                <!-- Adjuntar documentos requeridos -->
+                <div class="col-12 col-md-4">
+                  <div class="form-floating">
+                    <input type="file" class="form-control" id="documentosRequeridosPolizas" accept=".pdf,.jpg,.jpeg,.png" multiple required>
+                    <label for="documentosRequeridosPolizas">Adjuntar documentos requeridos</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Segundo tab: Alta o baja de asegurados -->
+            <div class="tab-pane fade" id="tabAltaBajaAsegurados" role="tabpanel" aria-labelledby="tabAltaBajaAsegurados-tab">
+              <div class="row g-3">
+                <!-- Adjuntar archivo excel -->
+                <div class="col-12 col-md-6">
+                  <div class="form-floating">
+                    <input type="file" class="form-control" id="excelAsegurados" accept=".csv" required>
+                    <label for="excelAsegurados">Adjuntar archivo excel</label>
+                  </div>
+                </div>
+                <!-- Adjuntar documentos requeridos -->
+                <div class="col-12 col-md-6">
+                  <div class="form-floating">
+                    <input type="file" class="form-control" id="documentosRequeridosAsegurados" accept=".pdf,.jpg,.jpeg,.png" multiple required>
+                    <label for="documentosRequeridosAsegurados">Adjuntar documentos requeridos</label>
+                  </div>
+                </div>
+                <!-- Switch: Enviar encuesta médica a nuevos asegurados -->
+                <div class="col-12">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="switchEncuestaMedica">
+                    <label class="form-check-label" for="switchEncuestaMedica">Enviar encuesta médica a nuevos asegurados</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End tab-content -->
+        </div><!-- End modal-body -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <!-- Botón para ejecutar la importación (generará un nuevo registro en Gestión de solicitudes) -->
+          <button type="button" class="btn btn-primary" id="btnImportarAsegurados">Importar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="reg.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+html{
+  font-size: 14px;
+  font-family: Montserrat;
+}
+body{
+  color: #444;
+  font-family: 'Montserrat', sans-serif;
+}
+.item-register{
+  transition: all 0.2s ease-in;
+  cursor: default;
+}
+.item-register:hover{
+    background-color: var(--bs-tertiary-bg);
+}
+.back-button{
+  width: 3rem;
+  height: 3rem;
+  font-size: large;
+  aspect-ratio: 1;
+}
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  max-width: 1280px;
+}
