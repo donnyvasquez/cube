@@ -28,7 +28,7 @@
         <div class="d-flex flex-column gap-3 w-100 justify-content-between align-items-start">
           <div class="gap-2">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enviarCrmModal">
-              Enviar a CRM
+              Enviar solicitud
             </button>
             <button
               type="button"
@@ -36,7 +36,7 @@
               id=""
               class="btn btn-outline-secondary d-none"
             >
-              Aprobar
+              Enviar solicitud
             </button>
           </div>
           
@@ -241,15 +241,15 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="enviarCrmModalLabel">Confirmación Envío a CRM</h5>
+        <h5 class="modal-title" id="enviarCrmModalLabel">Confirmación envío de solicitud</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
       <div class="modal-body">
-        Esta acción pondrá el estado de la solicitud en espera de revisión y no podrá hacer nuevos cambios hasta que el caso de CRM sea actualizado.
+        Esta acción creará la solicitud y los casos de CRM que sea necesario.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <a href="request_no_errors_pending_crm.html" class="btn btn-primary">Enviar a CRM</a>
+        <a href="request_no_errors_pending_crm.html" class="btn btn-primary">Enviar solicitud</a>
       </div>
     </div>
   </div>

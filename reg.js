@@ -163,10 +163,9 @@ const registros = [
                 </div>
                 <!-- Cambios -->
                 <div class="mb-2 mb-md-0 flex-fill">
-                  <small class="text-muted d-block">Cambios</small>
+                  <small class="text-muted d-block">Grupo</small>
                   <span class="fw-semibold">
-                    ${reg.altas > 0 ? `<span class="me-2">${reg.altas} <i class="bi bi-arrow-up-short text-success"></i></span>` : ''}
-                    ${reg.bajas > 0 ? `<span>${reg.bajas} <i class="bi bi-arrow-down-short text-danger"></i></span>` : ''}
+                    4850
                   </span>
                 </div>
                 <!-- Tipo de movimiento -->
